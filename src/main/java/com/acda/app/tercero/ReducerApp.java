@@ -14,10 +14,7 @@ public class ReducerApp extends Reducer<Text,IntWritable,Text,IntWritable>{
     private Text word = new Text();
 
     public void map(Object key, Text value, Context context) throws IOException, InterruptedException {
-    	String data = value.toString().replace(" ", "").replace("}", "} ");
-      StringTokenizer itr = new StringTokenizer(data);
-      while (itr.hasMoreTokens()) {
-    	  String pal = itr.nextToken(); 
+      for(String pal : value.toString().split("\n")) {
     	JSONObject json = new JSONObject(pal);
     	int id = json.getJSONObject("user").getInt("id");
         word.set(String.valueOf(id));
