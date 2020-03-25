@@ -1,0 +1,19 @@
+{"user":{id:1},menssage:"Hola mundo"}
+{user:{id:20},menssage:"TRUMP CONTRA EL IMPEACH"}
+{user:{id:20},menssage:"TRUMP CONTRA EL HATE THE DICTATOR"}
+{user:{id:20},menssage:"VENEZUELA HAVE A DICTATOR"}
+{user:{id:20},menssage:"HITLER WAS A DICTATOR"}
+{user:{id:20},menssage:"JUSTICE"}
+{user:{id:20},menssage:"GOOD LUCK"}
+{user:{id:20},menssage:"OFFICIAL DOCUMENTS"}
+{user:{id:20},menssage:"RULES"}
+{user:{id:20},menssage:"IMPEACH"}
+{user:{id:20},menssage:"TRUM FOR REELECTION"}
+{user:{id:40},menssage:"A WORLD WOULD CHANGE"}
+{user:{id:40},menssage:"A WORLD REVOLUTION"}
+{user:{id:40},menssage:"PEOPLES BY CHANGE"}
+{user:{id:40},menssage:"SWAP SWAP"}
+{user:{id:40},menssage:"RELIGION"}
+{user:{id:40},menssage:"DRAW PICTURES WORLD BY THE FUTURE"}
+{user:{id:50},menssage:"THE WORLD AND TRUMP POLITICS"}
+{user:{id:50},menssage:"TRUMP AND CLIMATIC CHANGE"}
