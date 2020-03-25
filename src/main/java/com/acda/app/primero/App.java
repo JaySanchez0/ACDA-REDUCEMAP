@@ -10,7 +10,7 @@ import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
 public class App {
-	public static void main(String[] args) throws IllegalArgumentException, IOException, ClassNotFoundException, InterruptedException {
+	public static void main(String[] args) throws Exception{
 		Configuration conf = new Configuration();
 	    Job job = Job.getInstance(conf, "App Count Tweets");
 	    job.setJarByClass(App.class);
