@@ -14,10 +14,11 @@ public class MapperApp extends Mapper<Object, Text, Text, IntWritable>{
     private Text word = new Text();
 
     public void map(Object key, Text value, Context context) throws IOException, InterruptedException {
-    	String data = value.toString().replace("{", " ").replace("}", " ").replace("[", " ").replace("]", " ").replace("null", "").replace(",", " ").replace("\"", " ");
+      String data = value.toString();
       StringTokenizer itr = new StringTokenizer(data);
       while (itr.hasMoreTokens()) {
-        word.set(itr.nextToken());
+    	String str = itr.nextToken().replace("{", " ").replace("}", " ").replace("[", " ").replace("]", " ").replace("null", "").replace(",", " ").replace("\"", " ");
+        word.set(str);
         context.write(word, one);
       }
     }
