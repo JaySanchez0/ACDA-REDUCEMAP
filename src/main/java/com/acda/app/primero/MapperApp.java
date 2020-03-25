@@ -14,7 +14,7 @@ public class MapperApp extends Mapper<Object, Text, Text, IntWritable>{
     private Text word = new Text();
 
     public void map(Object key, Text value, Context context) throws IOException, InterruptedException {
-    	String data = value.toString().replace("{", " ").replace("}", " ").replace("[", " ").replace("]", " ").replace("null", "").replace(",", " ");
+    	String data = value.toString().replace("{", " ").replace("}", " ").replace("[", " ").replace("]", " ").replace("null", "").replace(",", " ").replace("\"", " ");
       StringTokenizer itr = new StringTokenizer(data);
       while (itr.hasMoreTokens()) {
         word.set(itr.nextToken());
