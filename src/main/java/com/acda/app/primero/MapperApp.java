@@ -14,12 +14,14 @@ public class MapperApp extends Mapper<Object, Text, Text, IntWritable>{
     private Text word = new Text();
 
     public void map(Object key, Text value, Context context) throws IOException, InterruptedException {
-      String data = value.toString();
+      String data = value.toString().replace("{", " ").replace("}", " ").replace("[", " ").replace("]", " ").replace("null", "").replace(",", " ").replace("\"", " ");
       StringTokenizer itr = new StringTokenizer(data);
       while (itr.hasMoreTokens()) {
-    	String str = itr.nextToken().replace("{", " ").replace("}", " ").replace("[", " ").replace("]", " ").replace("null", "").replace(",", " ").replace("\"", " ");
-        word.set(str);
-        context.write(word, one);
+    	  String k = itr.nextToken();
+    	  if(k.equals("TRUMP") || k.equals("DICTATOR") || k.equals("MAGA") || k.equals("IMPEACH") || k.equals("DRAIN") || k.equals("SWAP") || k.equals("CHANGE")) {
+    		 word.set(k);
+    		 context.write(word, one);
+    	  }
       }
     }
 }
