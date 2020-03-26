@@ -18,7 +18,7 @@ public class MapperApp extends Mapper<Object, Text, Text, IntWritable>{
     	String pal = itr.nextToken();
     	if(!pal.equals("an") && !pal.equals("a") && !pal.equals("and") && !pal.equals("are") && !pal.equals("or") && 
     		!pal.equals("but") && !pal.equals("then") && !pal.equals("that") && !pal.equals("stop")) {
-	        word.set(itr.nextToken());
+	        word.set(pal);
 	        context.write(word, one);
     	}
       }
